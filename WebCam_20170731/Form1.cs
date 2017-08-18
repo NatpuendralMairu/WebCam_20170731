@@ -131,6 +131,15 @@ namespace WebCam_20170731
                 comboBox1.Items.Add(CaptureDevice.Name);
             }
             FinalFrame = new VideoCaptureDevice();
+
+            kayChart tempData = new kayChart(tempChrt, 120);
+            tempData.serieName = "TEMPERATURE";
+
+            Task.Factory.StartNew(() =>
+            {
+                tempData.updateChart(tempInDouble, 1000);
+            }
+             );
         }
         #endregion
 
@@ -183,14 +192,7 @@ namespace WebCam_20170731
 
         private void temp1txt_TextChanged(object sender, EventArgs e)
         {
-            kayChart tempData = new kayChart(tempChrt, 120);
-            tempData.serieName = "TEMPERATURE";
-
-            Task.Factory.StartNew(() =>
-            {
-                tempData.updateChart(tempInDouble, 1000);
-            }
-             );
+            
         }
     }
 }
