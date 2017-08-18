@@ -81,7 +81,7 @@ namespace WebCam_20170731
                 // Capture Image and Save
                 imgCapture.Image = vdoCapture.Image;
                 imgCapture.Image.Save("C:\\Users\\prajwal.nimmagadda\\Documents\\Webcam\\Screenshots\\Temp" + i + ".jpeg");
-                Wait(1000);
+                Wait(500);
 
                 // Dispose Image files free memory
                 imgCapture.Dispose();
@@ -131,15 +131,6 @@ namespace WebCam_20170731
                 comboBox1.Items.Add(CaptureDevice.Name);
             }
             FinalFrame = new VideoCaptureDevice();
-
-            kayChart tempData = new kayChart(tempChrt, 120);
-            tempData.serieName = "TEMPERATURE";
-
-            Task.Factory.StartNew(() =>
-            {
-                tempData.updateChart(tempInDouble, 1000);
-            }
-             );
         }
         #endregion
 
@@ -192,7 +183,19 @@ namespace WebCam_20170731
 
         private void temp1txt_TextChanged(object sender, EventArgs e)
         {
-            
+            graphingTemp();
+        }
+
+        public void graphingTemp()
+        {
+            kayChart tempData = new kayChart(tempChrt, 120);
+            tempData.serieName = "TEMPERATURE";
+
+            Task.Factory.StartNew(() =>
+            {
+                tempData.updateChart(tempInDouble, 1000);
+            }
+             );
         }
     }
 }
