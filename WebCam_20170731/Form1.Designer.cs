@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(dataLogging));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.vdoCapture = new System.Windows.Forms.PictureBox();
             this.tempChrt = new System.Windows.Forms.DataVisualization.Charting.Chart();
@@ -39,8 +39,6 @@
             this.lblDvcSel = new System.Windows.Forms.Label();
             this.imgCapture = new System.Windows.Forms.PictureBox();
             this.btnCapture = new System.Windows.Forms.Button();
-            this.tempData1 = new System.Windows.Forms.RichTextBox();
-            this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.temp1txt = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
@@ -67,6 +65,7 @@
             this.textBox24 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             ((System.ComponentModel.ISupportInitialize)(this.vdoCapture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tempChrt)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgCapture)).BeginInit();
@@ -86,7 +85,8 @@
             this.vdoCapture.InitialImage = ((System.Drawing.Image)(resources.GetObject("vdoCapture.InitialImage")));
             this.vdoCapture.Location = new System.Drawing.Point(12, 69);
             this.vdoCapture.Name = "vdoCapture";
-            this.vdoCapture.Size = new System.Drawing.Size(461, 347);
+            this.vdoCapture.Size = new System.Drawing.Size(390, 202);
+            this.vdoCapture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.vdoCapture.TabIndex = 1;
             this.vdoCapture.TabStop = false;
             // 
@@ -94,28 +94,28 @@
             // 
             this.tempChrt.BackColor = System.Drawing.Color.Gray;
             this.tempChrt.BorderlineColor = System.Drawing.Color.Transparent;
-            chartArea1.BackColor = System.Drawing.Color.DimGray;
-            chartArea1.BackImageTransparentColor = System.Drawing.Color.Transparent;
-            chartArea1.Name = "ChartArea1";
-            this.tempChrt.ChartAreas.Add(chartArea1);
-            legend1.BackColor = System.Drawing.Color.White;
-            legend1.Name = "Legend1";
-            this.tempChrt.Legends.Add(legend1);
-            this.tempChrt.Location = new System.Drawing.Point(479, 29);
+            chartArea2.BackColor = System.Drawing.Color.DimGray;
+            chartArea2.BackImageTransparentColor = System.Drawing.Color.Transparent;
+            chartArea2.Name = "ChartArea1";
+            this.tempChrt.ChartAreas.Add(chartArea2);
+            legend2.BackColor = System.Drawing.Color.White;
+            legend2.Name = "Legend1";
+            this.tempChrt.Legends.Add(legend2);
+            this.tempChrt.Location = new System.Drawing.Point(408, 32);
             this.tempChrt.Name = "tempChrt";
             this.tempChrt.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Fire;
-            series1.BackSecondaryColor = System.Drawing.Color.Transparent;
-            series1.BorderColor = System.Drawing.Color.Transparent;
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series1.Legend = "Legend1";
-            series1.Name = "TEMPERATURE";
-            series1.ToolTip = "#LABEL";
-            series1.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Time;
-            series1.YValuesPerPoint = 2;
-            series1.YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Double;
-            this.tempChrt.Series.Add(series1);
-            this.tempChrt.Size = new System.Drawing.Size(655, 387);
+            series2.BackSecondaryColor = System.Drawing.Color.Transparent;
+            series2.BorderColor = System.Drawing.Color.Transparent;
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series2.Legend = "Legend1";
+            series2.Name = "TEMPERATURE";
+            series2.ToolTip = "#LABEL";
+            series2.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Time;
+            series2.YValuesPerPoint = 2;
+            series2.YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Double;
+            this.tempChrt.Series.Add(series2);
+            this.tempChrt.Size = new System.Drawing.Size(726, 336);
             this.tempChrt.TabIndex = 2;
             this.tempChrt.Text = "chart1";
             // 
@@ -124,7 +124,7 @@
             this.btnStrtCapt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnStrtCapt.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnStrtCapt.BackgroundImage")));
             this.btnStrtCapt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnStrtCapt.Location = new System.Drawing.Point(224, 552);
+            this.btnStrtCapt.Location = new System.Drawing.Point(12, 510);
             this.btnStrtCapt.Name = "btnStrtCapt";
             this.btnStrtCapt.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.btnStrtCapt.Size = new System.Drawing.Size(114, 110);
@@ -143,7 +143,7 @@
             // 
             // imgCapture
             // 
-            this.imgCapture.Location = new System.Drawing.Point(12, 535);
+            this.imgCapture.Location = new System.Drawing.Point(12, 277);
             this.imgCapture.Name = "imgCapture";
             this.imgCapture.Size = new System.Drawing.Size(180, 127);
             this.imgCapture.TabIndex = 7;
@@ -162,23 +162,6 @@
             this.btnCapture.TabIndex = 10;
             this.btnCapture.UseVisualStyleBackColor = false;
             this.btnCapture.Click += new System.EventHandler(this.btnCapture_Click);
-            // 
-            // tempData1
-            // 
-            this.tempData1.Location = new System.Drawing.Point(268, 461);
-            this.tempData1.Name = "tempData1";
-            this.tempData1.Size = new System.Drawing.Size(81, 25);
-            this.tempData1.TabIndex = 11;
-            this.tempData1.Text = "";
-            // 
-            // webBrowser1
-            // 
-            this.webBrowser1.Location = new System.Drawing.Point(479, 424);
-            this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
-            this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.Size = new System.Drawing.Size(655, 246);
-            this.webBrowser1.TabIndex = 12;
-            this.webBrowser1.Url = new System.Uri("http://10.1.4.251/cgi-bin/moni/allch.cgi", System.UriKind.Absolute);
             // 
             // textBox1
             // 
@@ -367,6 +350,15 @@
             this.label2.TabIndex = 54;
             this.label2.Text = "Temperature ºC";
             // 
+            // webBrowser1
+            // 
+            this.webBrowser1.Location = new System.Drawing.Point(408, 374);
+            this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
+            this.webBrowser1.Name = "webBrowser1";
+            this.webBrowser1.Size = new System.Drawing.Size(726, 43);
+            this.webBrowser1.TabIndex = 12;
+            this.webBrowser1.Url = new System.Uri("http://10.1.4.251/cgi-bin/moni/allch.cgi", System.UriKind.Absolute);
+            // 
             // dataLogging
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -399,7 +391,6 @@
             this.Controls.Add(this.temp1txt);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.webBrowser1);
-            this.Controls.Add(this.tempData1);
             this.Controls.Add(this.btnCapture);
             this.Controls.Add(this.imgCapture);
             this.Controls.Add(this.lblDvcSel);
@@ -429,8 +420,6 @@
         private System.Windows.Forms.Label lblDvcSel;
         private System.Windows.Forms.PictureBox imgCapture;
         private System.Windows.Forms.Button btnCapture;
-        private System.Windows.Forms.RichTextBox tempData1;
-        private System.Windows.Forms.WebBrowser webBrowser1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox temp1txt;
         private System.Windows.Forms.TextBox textBox3;
@@ -457,6 +446,7 @@
         private System.Windows.Forms.TextBox textBox24;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.WebBrowser webBrowser1;
     }
 }
 

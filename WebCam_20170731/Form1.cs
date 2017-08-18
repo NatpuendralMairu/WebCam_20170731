@@ -1,12 +1,12 @@
 ﻿using System;
-using System.Text.RegularExpressions;
-using System.Drawing;
-using System.Windows.Forms;
-using AForge.Video;
-using AForge.Video.DirectShow;
-using HtmlAgilityPack;
 using rtChart;
+using AForge.Video;
+using System.Drawing;
+using HtmlAgilityPack;
+using System.Windows.Forms;
 using System.Threading.Tasks;
+using AForge.Video.DirectShow;
+using System.Text.RegularExpressions;
 
 namespace WebCam_20170731
 {
